@@ -41,6 +41,10 @@ public class NetworkingClient {
             //Send respons to the client
             if (msgFromClient) != null && ! msgFromClient.equalsIgnoreCase("Bye")) {
                 OutputStream clientOut = client.getOutputStream();
+                PrintWirter pw = new PrintWriter(clientOut, true);
+                String ansMsg = "Hello, " + msgFromClient;
+                pw.println(ansMsg);
+
 
 
             }
